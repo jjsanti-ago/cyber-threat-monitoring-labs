@@ -40,8 +40,39 @@ public class PasswordStrengthChecker {
         System.out.println("Uppercase: " + hasUppercase);
         System.out.println("Lowercase: " + hasLowercase);
         System.out.println("Number: " + hasNumber);
-        System.out.println("Special Character: " + hasSpecialCharacter);
+int score = 0;
 
-        scanner.close();
-    }
+if (password.length() >= 8) {
+    score++;
 }
+
+if (hasUppercase) {
+    score++;
+}
+
+if (hasLowercase) {
+    score++;
+}
+
+if (hasNumber) {
+    score++;
+}
+
+if (hasSpecialCharacter) {
+    score++;
+}
+
+String strength;
+
+if (score <= 2) {
+    strength = "WEAK";
+} else if (score <= 4) {
+    strength = "MODERATE";
+} else {
+    strength = "STRONG";
+}
+
+System.out.println("Score: " + score + "/5");
+System.out.println("Strength: " + strength);
+
+scanner.close();
