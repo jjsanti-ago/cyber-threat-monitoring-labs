@@ -27,19 +27,48 @@ The checker evaluates:
 ## Example
 
 ```text
-Enter password: ********
-
 Password Analysis
+-----------------
 
-Length:            ✓
-Uppercase:         ✓
-Lowercase:         ✓
-Number:            ✓
-Special Character: ✓
+Length: 12
+Uppercase: true
+Lowercase: true
+Number: true
+Special Character: true
+Score: 5/5
+Strength: STRONG
+```
+## Testing
 
+The application was tested using sample inputs representing different password strength levels.
+
+Test Case 1 — Weak
+
+Input: Sample password with insufficient length and limited character variety.
+
+Result:
+Score: 1/5
+Strength: WEAK
+
+Test Case 2 — Moderate
+
+Input: Sample password containing uppercase letters, lowercase letters, and numbers.
+
+Result:
+Score: 3/5
+Strength: MODERATE
+
+Test Case 3 — Strong
+
+Input: Sample password meeting all five implemented criteria.
+
+Result:
+Score: 5/5
 Strength: STRONG
 
-Security Considerations
+All test cases produced the expected classifications based on the implemented password strength criteria.
+
+## Security Considerations
 
 This project is intended for educational purposes.
 
@@ -47,22 +76,22 @@ The application does not store, transmit, or log passwords.
 
 For real-world applications, passwords should never be stored in plaintext. Secure password storage should use appropriate password hashing and security practices.
 
-Technologies
-Java
-Java Regular Expressions
-Console Input
-Learning Objectives
+## Technologies
+- Java
+- Java Regular Expressions
+- Console Input
+## Learning Objectives
 
 Through this project, I aim to strengthen my understanding of:
 
-Java programming fundamentals
-Conditional statements
-Loops
-String manipulation
-Regular expressions
-Basic security concepts
-Input validation
-Career Relevance
+- Java programming fundamentals
+- Conditional statements
+- Loops
+- String manipulation
+- Regular expressions
+- Basic security concepts
+- Input validation
+## Career Relevance
 
 This project demonstrates the application of programming fundamentals to a basic cybersecurity-related problem.
 
