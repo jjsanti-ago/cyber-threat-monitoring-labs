@@ -6,8 +6,17 @@ public class PasswordStrengthChecker {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter password: ");
-        String password = scanner.nextLine();
+     java.io.Console console = System.console();
+
+String password;
+
+if (console != null) {
+    char[] passwordChars = console.readPassword("Enter password: ");
+    password = new String(passwordChars);
+} else {
+    System.out.print("Enter password: ");
+    password = scanner.nextLine();
+}
 
         boolean hasUppercase = false;
         boolean hasLowercase = false;
